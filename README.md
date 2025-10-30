@@ -1,229 +1,121 @@
-# JSON Tree Visualizer
+🌳 JSON Tree Visualizer
 
-A modern, interactive web application for visualizing JSON data structures as hierarchical node trees. Built with React and powered by React Flow, this tool makes it easy to understand and navigate complex JSON objects through an intuitive visual representation.
+A modern, interactive web application built with React and React Flow for visualizing complex JSON data structures as an interactive, hierarchical node tree.
 
-![JSON Tree Visualizer](https://img.shields.io/badge/React-19.1.1-blue) ![Vite](https://img.shields.io/badge/Vite-7.1.7-purple) ![React Flow](https://img.shields.io/badge/React%20Flow-12.9.1-green)
+🚀 Live Demo & Repository
 
-## ✨ Features
+Aspect
 
-### 🌳 Interactive Tree Visualization
-- **Hierarchical Display**: Visualize JSON structures as a parent-child node tree
-- **Color-Coded Nodes**: 
-  - 🟣 **Purple** for Objects (`{}`)
-  - 🟢 **Green** for Arrays (`[]`)
-  - 🟠 **Orange** for Primitives (strings, numbers, booleans, null)
-- **Connected Relationships**: Animated edges connecting parent and child nodes
-- **Interactive Controls**: Zoom, pan, and navigate with built-in controls
-- **Mini Map**: Quick navigation overview of the entire tree structure
+Details
 
-### 🔍 Advanced Search Functionality
-- **JSON Path Search**: Search nodes using JSON path notation
-  - Supports formats like: `name`, `address.city`, `projects[0].title`, `$.user.email`
-- **Smart Matching**: Flexible path matching with partial and exact matches
-- **Visual Highlighting**: Matching nodes highlighted in red with enhanced borders and shadows
-- **Auto-Navigation**: Automatically pans and zooms to center matched nodes
-- **Search Results**: Real-time feedback showing "Match found" or "No match found"
+Live Application
 
-### 🎨 Theme Support
-- **Light/Dark Mode**: Toggle between light and dark themes
-- **Persistent Preferences**: Theme choice saved in localStorage
-- **Smooth Transitions**: Seamless theme switching
+Launch Visualizer on GitHub Pages
 
-### 💻 User-Friendly Interface
-- **JSON Text Editor**: Large textarea for JSON input with syntax support
-- **Real-Time Updates**: Tree visualization updates instantly as you edit JSON
-- **Error Handling**: Graceful handling of invalid JSON input
-- **Responsive Design**: Works across different screen sizes
+Repository
 
-## 🚀 Getting Started
+https://github.com/TopDer25/json-tree-visualizer.git
 
-### Prerequisites
+✨ Key Features
 
-- Node.js (version 14.x or higher)
-- npm or yarn package manager
+Icon
 
-### Installation
+Feature
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd Json-tree-Visualizer
-   ```
+Description
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+🌐
 
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
+Interactive Visualization
 
-4. **Open your browser**
-   Navigate to `http://localhost:5173` (or the port shown in your terminal)
+Zoom, pan, and navigate complex JSON data structures using React Flow with a Minimap overview.
 
-### Build for Production
+🔍
 
-```bash
-npm run build
-```
+Advanced JSON Path Search
 
-The production-ready files will be in the `dist` directory.
+Search for nodes using path notation (e.g., projects[0].title or address.city). Matching nodes are automatically highlighted and centered in the view.
 
-### Preview Production Build
+🎨
 
-```bash
-npm run preview
-```
+Themed Display
 
-## 📖 Usage
+Support for Light/Dark Mode with persistent theme preferences saved locally.
 
-### Basic Workflow
+🟣
 
-1. **Input JSON Data**
-   - Paste or type your JSON data into the textarea on the left side
-   - The default JSON structure is pre-loaded as an example
-   - The tree visualization updates automatically
+Color-Coded Nodes
 
-2. **Explore the Tree**
-   - Use zoom controls (+/-) to zoom in/out
-   - Click and drag to pan around the canvas
-   - Use the minimap for quick navigation
+Clearly differentiate data types: Purple (Objects), Green (Arrays), Orange (Primitives).
 
-3. **Search for Nodes**
-   - Enter a JSON path in the search box
-   - Examples:
-     - `name` - finds the "name" property
-     - `address.city` - finds nested "city" in "address"
-     - `projects[0]` - finds the first item in "projects" array
-     - `projects[0].title` - finds "title" in the first project
-   - Click "Search" or press Enter
-   - Matching nodes will be highlighted and the view will pan to them
+💻
 
-4. **Toggle Theme**
-   - Click the theme toggle switch in the header
-   - Your preference is automatically saved
+Real-Time Editor
 
-### Search Path Formats
+Instant tree update as you type or paste JSON data into the dedicated text editor.
 
-The search functionality supports various JSON path formats:
+🛠️ Tech Stack
 
-| Format | Example | Description |
-|--------|---------|-------------|
-| Simple key | `name` | Matches `root.name` |
-| Nested path | `address.city` | Matches `root.address.city` |
-| JSONPath style | `$.user.email` | Matches `root.user.email` |
-| Array index | `projects[0]` | Matches `root.projects.[0]` |
-| Nested array | `projects[0].title` | Matches `root.projects.[0].title` |
-| Partial match | `city` | Matches any node containing "city" |
+Technology
 
-## 🛠️ Technologies Used
+Role
 
-- **React 19.1.1** - UI library
-- **React Flow (@xyflow/react 12.9.1)** - Node-based graph visualization
-- **Vite 7.1.7** - Build tool and development server
-- **CSS3** - Styling with CSS variables for theme support
+Version
 
-## 📁 Project Structure
+React
 
-```
-Json-tree-Visualizer/
-├── src/
-│   ├── components/
-│   │   ├── Header.jsx              # Header with theme toggle
-│   │   ├── TextArea.jsx            # JSON input textarea
-│   │   ├── SearchBox.jsx           # Search input component
-│   │   ├── TreeVisualizer.jsx      # Container for tree visualization
-│   │   ├── PreviewTreeVisualizer.jsx  # Main React Flow visualization
-│   │   └── components.css         # Component styles
-│   ├── context/
-│   │   ├── JSONInputContext.jsx    # JSON data state management
-│   │   └── ThemeContext.jsx        # Theme state management
-│   ├── App.jsx                     # Root component
-│   ├── JSONTreeVisualizer.jsx      # Main application component
-│   ├── main.jsx                    # Application entry point
-│   ├── index.css                   # Global styles
-│   └── App.css                     # App-specific styles
-├── public/                         # Static assets
-├── package.json                    # Dependencies and scripts
-├── vite.config.js                  # Vite configuration
-└── README.md                       # This file
-```
+Core UI Library
 
-## 🎯 Key Components
+v19.1.1
 
-### PreviewTreeVisualizer
-The core visualization component that:
-- Parses JSON into nodes and edges
-- Renders the tree structure using React Flow
-- Handles search functionality and node highlighting
-- Manages view navigation and panning
+React Flow
 
-### JSONInputContext
-Provides global state management for:
-- JSON input value
-- Update and clear functions
-- Default JSON example data
+Graph Visualization
 
-### ThemeContext
-Manages application theming:
-- Light/dark mode state
-- Theme persistence in localStorage
-- Theme toggle functionality
+v12.9.1
 
-## 🔧 Development
+Vite
 
-### Available Scripts
+Build Tool & Dev Server
 
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint to check code quality
+v7.1.7
 
-### Code Structure
+CSS3
 
-The application uses React Context API for state management:
-- **JSONInputContext**: Manages JSON data across components
-- **ThemeContext**: Handles theme state globally
+Theming and Styling
 
-Component architecture follows a container-presentational pattern:
-- Container components (TreeVisualizer) manage state and logic
-- Presentational components (PreviewTreeVisualizer, SearchBox) handle UI rendering
+Custom
 
-## 🎨 Customization
+⚙️ Getting Started (Local Development)
 
-### Node Colors
-Node colors can be customized in `PreviewTreeVisualizer.jsx`:
-- Objects: `#8b5cf6` (purple)
-- Arrays: `#4ade80` (green)
-- Primitives: `#ffa500` (orange)
-- Highlight (search match): `#ef4444` (red)
+Prerequisites
 
-### Theme Colors
-Theme variables can be adjusted in CSS files using CSS custom properties.
+Node.js (version 14+)
 
-## 🤝 Contributing
+npm or yarn
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Installation
 
-## 📝 License
+# 1. Clone the repository
+git clone [https://github.com/TopDer25/json-tree-visualizer.git](https://github.com/TopDer25/json-tree-visualizer.git)
+cd json-tree-visualizer
 
-This project is open source and available for use and modification.
+# 2. Install dependencies
+npm install
 
-## 🐛 Troubleshooting
+# 3. Start the development server
+npm run dev
+# App will be running at http://localhost:5173
 
-### JSON Not Parsing
-- Ensure your JSON is valid (check for trailing commas, proper quotes, etc.)
-- Use a JSON validator to verify your input
 
-### Search Not Finding Nodes
-- Try using exact paths like `address.city` instead of partial matches
-- Check that the JSON path matches the actual structure
-- Remember that array indices start from 0
+📜 Usage Workflow
 
-### Visualization Not Updating
-- Clear the input and re-paste your JSON
-- Check the browser console for any error messages
-  
-  
+Input: Paste your JSON into the textarea.
+
+Visualize: The tree graph renders instantly.
+
+Search: Use the search bar for quick node lookup (e.g., searching name finds all name properties).
+
+Theme: Toggle the theme switch to save your preference.
+
+License: This project is open source and available for use and modification.

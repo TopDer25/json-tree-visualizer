@@ -1,0 +1,7 @@
+ body{
+    margin: auto 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+ }

@@ -1,0 +1,166 @@
+  /*  Headers css  */
+  
+  #headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-color);
+  }
+
+  #headers .themeColor{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  #headers .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  #headers  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  #headers .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  #headers .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  #headers input:checked + .slider {
+    background-color: black;
+  }
+  
+  #headers input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  #headers input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  #headers .slider.round {
+    border-radius: 34px;
+  }
+  
+  #headers .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* visualizer css */
+
+  #visualizer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* textArea css */
+
+  #textArea{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px;
+  }
+
+  #textArea span{
+    color:  rgb(134, 131, 131);
+  }
+
+  #textArea textarea {
+    height: 60vh;
+    padding: 4px;
+    border-radius: 5px;
+    border-color: var(--border-color);
+    background-color: var(--textarea-bg);
+    color: var(--text-color);
+  }
+
+  #textArea .btn{
+    width: 40%;
+  }
+
+  /* tree Visualizer css*/
+
+  #treeVisualizer{
+    width: 50%;
+  }
+
+  /* search Box css */
+
+ #searchBox{
+  height: 40px;
+ }
+
+  #searchBox input {
+    width: 68%;
+    margin: 0px;
+    height: 86%;
+    border-radius: 0px;
+    outline: none;
+    border: 1px solid;
+    font-size: 16px;
+    border-color: var(--border-color);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius:4px ;
+    background-color: var(--textarea-bg);
+    color: var(--text-color);
+  }
+
+  #searchBox .btn{
+    height: 100%;
+    padding: 10px 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius:0px ;
+    font-size: small;
+  }
+
+  /* PreviewTreeVisualizer css */
+
+  #PreviewTreeVisualizer {
+    position: relative;
+    background-color: var(--textarea-bg, #f8f9fa);
+  }
+
+  #PreviewTreeVisualizer .react-flow {
+    background-color: transparent;
+  }
+
+  /* common css */
+
+  .btn{
+    color: white;
+    background-color: rgb(123, 123, 236);
+    border: none;
+    padding: 20px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 21px;
+  }

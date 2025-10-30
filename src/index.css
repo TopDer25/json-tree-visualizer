@@ -1,0 +1,42 @@
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --border-color: rgb(185, 185, 185);
+  --textarea-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --border-color: #444444;
+  --textarea-bg: #2a2a2a;
+}
+/* Custom Styles for the JSON Tree Visualizer */
+
+/* Change the background of the entire React Flow canvas.
+  The selector .react-flow__pane targets the main interactive area.
+*/
+.react-flow__pane {
+    background-color: #f7f9fd; /* Light blue-gray background */
+    transition: background-color 0.3s ease;
+}
+
+/* Style the main container of the React Flow component 
+  to give it a distinct border.
+*/
+.reactflow-wrapper {
+    /* Assuming you wrap ReactFlowProvider in a div with this class */
+    border: 3px solid #6366f1; /* Tailwind 'indigo-600' for a strong primary look */
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Example: Add a subtle shadow to all nodes 
+*/
+.react-flow__node {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
